@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/train_bg_color_e">
+
+    <com.avad.humancare.kiosk.view.TrainHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintBottom_toTopOf="@+id/btn_footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/train_layout_margin"
+            >
+
+            <!-- 전달매체 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/train_ticket_delivery_method"
+                android:textColor="@color/black"
+                android:textSize="@dimen/train_font_size"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/train_border_8"
+                android:layout_marginVertical="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tab1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/train_ticket_delivery_method1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/train_font_size_small"
+                        android:paddingVertical="8dp"
+                        android:background="@color/train_bg_color1"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tab2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/train_ticket_delivery_method2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/train_font_size_small"
+                        android:paddingVertical="8dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_marginHorizontal="1dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tab3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/train_ticket_delivery_method3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/train_font_size_small"
+                        android:paddingVertical="8dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- 회원구분 -->
+            <LinearLayout
+                android:id="@+id/mber_type_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/train_payment_card_item_title_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_member_type_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioGroup
+                        android:id="@+id/mber_radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/mber_radio1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:text="@string/train_member"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/train_font_size_small"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/mber_radio2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:text="@string/train_non_member"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/train_font_size_small"
+                            />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 이름 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/train_payment_card_item_title_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    style="@style/TrainEditBox"
+                    android:gravity="left|center_vertical" />
+
+            </LinearLayout>
+
+            <!-- 회원확인방법 -->
+            <LinearLayout
+                android:id="@+id/mber_confirm_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="@dimen/train_payment_card_item_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/train_member_confirm_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/train_font_size_small"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioGroup
+                            android:id="@+id/mber_confirm_radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <RadioButton
+                                android:id="@+id/mber_confirm1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:text="@string/train_member_confirm_membernum"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/train_font_size_small" />
+
+                            <RadioButton
+                                android:id="@+id/mber_confirm2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:text="@string/train_member_confirm_phonenum"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/train_font_size_small"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/mber_confirm3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/train_member_confirm_email"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/train_font_size_small"
+                                />
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/train_payment_card_item_height"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <View
+                        android:layout_width="@dimen/train_payment_card_item_title_width"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <EditText
+                        android:id="@+id/edit_mber_confirm"
+                        style="@style/TrainEditBox"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:inputType="number"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/inquiryBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/header_home_btn_size"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/inquiry"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/train_font_size_small"
+                        android:background="@color/train_bg_color1"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/confirm_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/train_member_confirm_success"
+                    android:textColor="@color/train_font_color_blue"
+                    android:textSize="@dimen/train_font_size_small"
+                    />
+
+            </LinearLayout>
+
+            <!-- 받는분연락처 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/train_payment_card_item_title_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_to_cantact"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_phonenum"
+                    style="@style/TrainEditBox"
+                    android:hint="@string/train_to_cantact_hint"
+                    android:gravity="left|center_vertical"
+                    android:inputType="number"
+                    />
+
+            </LinearLayout>
+
+            <!-- 비밀번호 -->
+            <LinearLayout
+                android:id="@+id/password_ly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/train_payment_card_item_title_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_member_password"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_pw"
+                    style="@style/TrainEditBox"
+                    android:hint="@string/train_member_password_hint"
+                    android:gravity="left|center_vertical"
+                    android:inputType="numberPassword"
+                    android:maxLength="5"
+                    />
+
+            </LinearLayout>
+
+            <!-- 비밀번호 확인-->
+            <LinearLayout
+                android:id="@+id/password_ly2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/train_payment_card_item_title_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_member_password2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_pw2"
+                    style="@style/TrainEditBox"
+                    android:hint="@string/train_member_password_hint"
+                    android:gravity="left|center_vertical"
+                    android:inputType="numberPassword"
+                    android:maxLength="5"
+                    />
+
+            </LinearLayout>
+
+            <View style="@style/TrainBorderStyle"
+                android:layout_marginVertical="12dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/train_ticket_delivery_warning_msg"
+                android:textColor="@color/train_font_color_red"
+                android:textSize="@dimen/train_font_size_small"
+                />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/train_footer"
+        android:id="@+id/btn_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

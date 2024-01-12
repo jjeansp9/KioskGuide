@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <include
+        android:id="@+id/top_title"
+        layout="@layout/layout_issuance_title"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/img_public_bg04"
+        android:layout_marginVertical="@dimen/common_margin_20"
+        android:layout_marginHorizontal="@dimen/common_margin_40"
+        >
+
+        <RelativeLayout
+            android:id="@+id/title_ly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/issuance_notify_title_height"
+            android:background="@drawable/img_public_bg03"
+            >
+
+            <TextView
+                android:id="@+id/title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="[ 사 용 안 내 ]"
+                android:textColor="@color/issuance_font_color_red"
+                android:textSize="@dimen/font_size_large2"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/content_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_ly"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/text_content_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_large"
+                android:gravity="center"
+                android:padding="20dp"
+                android:visibility="gone"
+                android:bufferType="spannable"
+                />
+
+            <TextView
+                android:id="@+id/text_identify_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/issuance_identify_success"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_xlarge"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/fingerprint_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="visible"
+                >
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/img_fingerprint01"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/img_fingerprint02"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--  증명서 발급 완료 -->
+        <RelativeLayout
+            android:id="@+id/complete_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/text_complete_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/issuance_certificate_completed"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_xlarge"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/text_complete_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/issuance_certificate_completed2"
+                android:textColor="@color/issuance_font_color_blue"
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_below="@id/text_complete_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_issuance_bottom"
+        android:id="@+id/bottom_btn_layout"
+        />
+
+</LinearLayout>

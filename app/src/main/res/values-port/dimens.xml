@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_header_height">68dp</dimen>
+    <dimen name="main_backbtn_size">48dp</dimen>
+    <dimen name="main_content_btn_size">180dp</dimen>
+    <dimen name="main_content_img_size">100dp</dimen>
+    <dimen name="default_corner_radius">20dp</dimen>
+    <dimen name="default_card_elevation">10dp</dimen>
+
+    <dimen name="common_margin_4">4dp</dimen>
+    <dimen name="common_margin_8">8dp</dimen>
+    <dimen name="common_margin_10">10dp</dimen>
+    <dimen name="common_margin_20">20dp</dimen>
+    <dimen name="common_margin_30">30dp</dimen>
+    <dimen name="common_margin_40">40dp</dimen>
+    <dimen name="common_margin_50">50dp</dimen>
+    <dimen name="common_margin_60">60dp</dimen>
+
+    <dimen name="font_size_small">16dp</dimen>
+    <dimen name="font_size">20dp</dimen>
+    <dimen name="font_size_large">24dp</dimen>
+    <dimen name="font_size_large2">28dp</dimen>
+    <dimen name="font_size_large3">32dp</dimen>
+    <dimen name="font_size_xlarge">40dp</dimen>
+
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="layout_margin_24">24dp</dimen>
+    <dimen name="layout_margin_36">36dp</dimen>
+
+    <dimen name="main_fastfood_header">480dp</dimen>
+    <dimen name="main_fastfood_header_sub">60dp</dimen>
+
+</resources>

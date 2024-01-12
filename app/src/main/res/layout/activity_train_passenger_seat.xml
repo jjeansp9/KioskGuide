@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/train_bg_color_e"
+    >
+
+    <com.avad.humancare.kiosk.view.TrainHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/train_passenger_seat_title"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/train_font_size_large" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/train_border_8"
+            />
+
+        <LinearLayout
+            android:id="@+id/passenger_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="@dimen/train_layout_margin"
+            >
+<!--
+            <include
+                layout="@layout/train_passenger_type_layout"
+                />
+-->
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/train_border_8"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/train_layout_margin"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/train_seat_max"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/train_font_size_small"
+                />
+
+            <TextView
+                android:id="@+id/seat_count_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/train_passenger_seat_count"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/train_font_size_large"
+                android:gravity="right"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/train_border_8"
+            />
+
+    </LinearLayout>
+
+    <include layout="@layout/train_footer"/>
+
+</LinearLayout>

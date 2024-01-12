@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <include
+        layout="@layout/layout_realestate_header"
+        android:id="@+id/header_view"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/layout_margin"
+        android:paddingHorizontal="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/realEstateIssueTitleText"
+                android:text="부동산표시"
+                />
+
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/img_box01"
+                android:textColor="@color/text_color"
+                android:textSize="18dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                style="@style/realEstateIssueTitleText"
+                android:text="부동산종류"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/img_box01"
+                android:textColor="@color/text_color"
+                android:textSize="18dp"
+                android:gravity="center_vertical"
+                android:text="집합건물"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                style="@style/realEstateIssueTitleText"
+                android:text="주민등록번호"
+                />
+
+            <LinearLayout
+                android:id="@+id/checkView1"
+                android:layout_width="@dimen/real_estate_issue_check_view_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/img_box04"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/check1"
+                    android:layout_width="@dimen/real_estate_issue_checkbox_size"
+                    android:layout_height="@dimen/real_estate_issue_checkbox_size"
+                    android:background="@drawable/img_checkbox_selector"
+                    android:button="@null" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="미공개"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkView2"
+                android:layout_width="@dimen/real_estate_issue_check_view_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/img_box04"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/check2"
+                    android:layout_width="@dimen/real_estate_issue_checkbox_size"
+                    android:layout_height="@dimen/real_estate_issue_checkbox_size"
+                    android:background="@drawable/img_checkbox_selector"
+                    android:button="@null"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="특정인공개"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                style="@style/realEstateIssueTitleText"
+                android:text="등기사항 요약표"
+                />
+
+            <LinearLayout
+                android:id="@+id/checkView3"
+                android:layout_width="@dimen/real_estate_issue_check_view_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/img_box04"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/check3"
+                    android:layout_width="@dimen/real_estate_issue_checkbox_size"
+                    android:layout_height="@dimen/real_estate_issue_checkbox_size"
+                    android:background="@drawable/img_checkbox_selector"
+                    android:button="@null"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="미첨부"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkView4"
+                android:layout_width="@dimen/real_estate_issue_check_view_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/img_box04"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/check4"
+                    android:layout_width="@dimen/real_estate_issue_checkbox_size"
+                    android:layout_height="@dimen/real_estate_issue_checkbox_size"
+                    android:background="@drawable/img_checkbox_selector"
+                    android:button="@null"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="첨부"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                style="@style/realEstateIssueTitleText"
+                android:text="매매목록"
+                />
+
+            <LinearLayout
+                android:id="@+id/checkView5"
+                android:layout_width="@dimen/real_estate_issue_check_view_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/img_box04"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/check5"
+                    android:layout_width="@dimen/real_estate_issue_checkbox_size"
+                    android:layout_height="@dimen/real_estate_issue_checkbox_size"
+                    android:background="@drawable/img_checkbox_selector"
+                    android:button="@null"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="미첨부"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkView6"
+                android:layout_width="@dimen/real_estate_issue_check_view_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/img_box04"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/check6"
+                    android:layout_width="@dimen/real_estate_issue_checkbox_size"
+                    android:layout_height="@dimen/real_estate_issue_checkbox_size"
+                    android:background="@drawable/img_checkbox_selector"
+                    android:button="@null"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="첨부"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                style="@style/realEstateIssueTitleText"
+                android:text="증명서종류"
+                />
+
+            <LinearLayout
+                android:id="@+id/checkView7"
+                android:layout_width="@dimen/real_estate_issue_check_view_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/img_box04"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/check7"
+                    android:layout_width="@dimen/real_estate_issue_checkbox_size"
+                    android:layout_height="@dimen/real_estate_issue_checkbox_size"
+                    android:background="@drawable/img_checkbox_selector"
+                    android:button="@null"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="말소사항포함"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkView8"
+                android:layout_width="@dimen/real_estate_issue_check_view_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/img_box04"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <CheckBox
+                    android:id="@+id/check8"
+                    android:layout_width="@dimen/real_estate_issue_checkbox_size"
+                    android:layout_height="@dimen/real_estate_issue_checkbox_size"
+                    android:background="@drawable/img_checkbox_selector"
+                    android:button="@null"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="현재유효사항"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                style="@style/realEstateIssueTitleText"
+                android:text="발급통수"
+                />
+
+            <TextView
+                android:id="@+id/count_txt"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_box04"
+                android:text="1"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="통"
+                android:textColor="@color/text_color"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                />
+
+            <Button
+                android:id="@+id/btn_plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/img_box07"
+                android:layout_marginLeft="16dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_large"
+                />
+
+            <Button
+                android:id="@+id/btn_minus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/img_box07"
+                android:layout_marginLeft="14dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_large"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                style="@style/realEstateIssueTitleText"
+                android:text="수수료"
+                />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_box04"
+                android:text="1,000"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="원"
+                android:textColor="@color/text_color"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="발급"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_large"
+            android:background="@drawable/img_box08"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_realestate_footer"
+        />
+
+</LinearLayout>

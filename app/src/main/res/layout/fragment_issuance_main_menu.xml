@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".issue.fragments.IssuanceMenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include
+        layout="@layout/layout_issuance_title"
+        />
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/img_public_bg04"
+        android:padding="@dimen/common_margin_20"
+        android:layout_marginVertical="@dimen/common_margin_20"
+        android:layout_marginHorizontal="@dimen/common_margin_40"
+        android:gravity="center"
+        >
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_issuance_bottom"
+        android:id="@+id/bottom_btn_layout"
+        />
+
+</LinearLayout>

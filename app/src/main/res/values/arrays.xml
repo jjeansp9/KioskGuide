@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- fastfood -->
+    <string-array name="fastfood_menu_burger">
+        <item>@string/fastfood_burger1</item>
+        <item>@string/fastfood_burger2</item>
+        <item>@string/fastfood_burger3</item>
+    </string-array>
+
+    <string-array name="fastfood_menu_burgerset">
+        <item>@string/fastfood_burgerset1</item>
+        <item>@string/fastfood_burgerset2</item>
+        <item>@string/fastfood_burgerset3</item>
+    </string-array>
+
+    <string-array name="calendar_week">
+        <item>일</item>
+        <item>월</item>
+        <item>화</item>
+        <item>수</item>
+        <item>목</item>
+        <item>금</item>
+        <item>토</item>
+    </string-array>
+
+    <string-array name="array_telecommunication">
+        <item>SKT</item>
+        <item>KT</item>
+        <item>LGT</item>
+    </string-array>
+
+    <string-array name="array_hospital_departments">
+        <item>소아과</item>
+        <item>내과</item>
+        <item>정형외과</item>
+        <item>신경외과</item>
+        <item>흉부외과</item>
+        <item>응급의학과</item>
+        <item>안과</item>
+        <item>이비인후과</item>
+        <item>비뇨기과</item>
+        <item>산부인과</item>
+        <item>신경정신과</item>
+        <item>성형외과</item>
+        <item>피부과</item>
+        <item>통증의학과</item>
+        <item>재활의학과</item>
+        <item>한방과</item>
+    </string-array>
+    <!-- must be same length with the array_hospital_departments -->
+    <string-array name="array_hospital_doctor">
+        <item>안정원</item>
+        <item>김정길</item>
+        <item>이경진</item>
+        <item>채송화</item>
+        <item>김준완</item>
+        <item>봉광현</item>
+        <item>이지훈</item>
+        <item>김인후</item>
+        <item>이루다</item>
+        <item>양석형</item>
+        <item>이시준</item>
+        <item>한건우</item>
+        <item>김선우</item>
+        <item>차요한</item>
+        <item>양소민</item>
+        <item>허준</item>
+    </string-array>
+</resources>

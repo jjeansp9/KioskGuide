@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTabWidgetStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/tab_indicator_text</item>
+    </style>
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
+    <style name="IssuanceSelectCheckboxLayout"  >
+        <item name="android:layout_width">@dimen/issuance_select_check_layout_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/img_textbox08</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingHorizontal">4dp</item>
+    </style>
+
+    <style name="IssuanceSelectCheckbox" parent="Widget.AppCompat.CompoundButton.CheckBox"  >
+        <item name="android:layout_width">@dimen/issuance_select_checkbox_size</item>
+        <item name="android:layout_height">@dimen/issuance_select_checkbox_size</item>
+        <item name="android:background">@drawable/img_checkbox_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="realEstateIssueTitleText" parent="Widget.AppCompat.TextView"  >
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/text_color_sub</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    <style name="AutoSize">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">4dp</item>
+        <item name="android:autoSizeStepGranularity">1dp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+</resources>

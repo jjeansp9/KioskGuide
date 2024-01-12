@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/train_bg_color_e"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <com.avad.humancare.kiosk.view.TrainHeaderView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingVertical="16dp"
+                android:text="@string/train_start_date"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/train_font_size_large" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/train_border_8"
+            />
+
+        <!-- calendar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingHorizontal="@dimen/train_layout_margin"
+            android:paddingVertical="6dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="8dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/last_month_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bt_border04"
+                    android:padding="6dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/btn_left" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/train_calendar_last_month"
+                        android:textColor="@color/train_font_color_main"
+                        android:textSize="@dimen/train_font_size_small2"
+                        android:layout_marginLeft="6dp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ym_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="2022년 10월"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size" />
+
+                <LinearLayout
+                    android:id="@+id/next_month_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bt_border04"
+                    android:padding="6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/train_calendar_next_month"
+                        android:textColor="@color/train_font_color_main"
+                        android:textSize="@dimen/train_font_size_small2"
+                        android:layout_marginRight="6dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/btn_right" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- 달력 - 요일리스트 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calendarWeekListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="7"
+                tools:itemCount="7"
+                tools:listitem="@layout/calendar_day_item"
+                />
+
+            <!-- 달력 - 날짜리스트 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calendarDayView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="7"
+                tools:listitem="@layout/calendar_day_item"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/train_border_8"
+            />
+
+        <!-- 시간 리스트 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/time_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/train_border_8"
+            />
+
+    </LinearLayout>
+
+    <include layout="@layout/train_footer"/>
+
+</LinearLayout>

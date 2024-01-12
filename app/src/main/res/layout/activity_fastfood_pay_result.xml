@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.avad.humancare.kiosk.fastfood.FastfoodPayResultActivity">
+
+    <include layout="@layout/fastfood_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <!-- 쿠폰 바코드 -->
+        <LinearLayout
+            android:id="@+id/barcode_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="@string/fastfood_coupon_reader_scan"
+                android:textSize="@dimen/font_size_large3"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_barcode"
+                android:layout_marginTop="60dp"
+                />
+
+        </LinearLayout>
+
+        <!-- 카드 -->
+        <LinearLayout
+            android:id="@+id/card_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="@string/fastfood_card_use_method"
+                android:textSize="@dimen/font_size_large3"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_card01"
+                    />
+
+                <ImageView
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_card02"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="@string/fastfood_card_use_method_detail"
+                android:textSize="@dimen/font_size_large2"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <!-- 결제완료 -->
+        <LinearLayout
+            android:id="@+id/complete_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="@string/fastfood_payment_success"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="@string/order_number"
+                android:textSize="28dp"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/fastfood_bg_main_color"
+                android:text="126"
+                android:textSize="60dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:background="@drawable/img_ticket"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="@string/fastfood_payment_success_detail"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/fastfood_footer" />
+
+</LinearLayout>

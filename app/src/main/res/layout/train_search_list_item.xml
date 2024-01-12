@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/train_search_ly"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/train_layout_margin"
+        android:paddingVertical="12dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/train_name"
+            style="@style/TrainSearchViewItem"
+            android:text="ktx-산천\n802"
+            android:textColor="@color/black"
+            android:textSize="@dimen/train_font_size_small"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/start_time"
+            style="@style/TrainSearchViewItem"
+            android:text="10:30"
+            android:textColor="@color/black"
+            android:textSize="@dimen/train_font_size_small"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/end_time"
+            style="@style/TrainSearchViewItem"
+            android:textColor="@color/black"
+            android:textSize="@dimen/train_font_size_small"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/basic_ly"
+            style="@style/TrainSearchViewItem"
+            android:layout_height="match_parent"
+            android:background="@drawable/train_search_listitem_box_blue"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="46,000"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/train_font_size_small"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/price1_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price1"
+                android:layout_centerInParent="true"
+                android:text="@string/train_search_waiting_reservation"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/train_font_size_small2" />
+
+            <ImageView
+                android:id="@+id/chooseImg1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_choose"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/vip_ly"
+            style="@style/TrainSearchViewItem"
+            android:layout_height="match_parent"
+            android:background="@drawable/train_search_listitem_box_blue"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/train_font_size_small"
+                android:gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/chooseImg2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_choose"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

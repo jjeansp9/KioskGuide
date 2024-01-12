@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/day_ly"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginHorizontal="4dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="4dp"
+        >
+
+        <TextView
+            android:id="@+id/day_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="@color/train_font_color_8"
+            android:textSize="@dimen/train_font_size_small"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/day_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/train_font_color_main"
+            android:textSize="@dimen/train_font_size_small2"
+            style="@style/AutoSize"
+            android:text="오늘"
+            android:maxLines="1"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+        <!--    출발일, 도착일 text가 2줄로 표시되어 View가 깔끔하지 못해서
+                무조건 1줄로 표시하기위해 AutoSize, maxLines 추가    -->
+
+    </LinearLayout>
+
+</RelativeLayout>

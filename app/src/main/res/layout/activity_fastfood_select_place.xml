@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/fastfood_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fastfood_explain2"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_large3"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/fastfood_sel_layout_margin_horizontal"
+            android:layout_marginVertical="@dimen/fastfood_sel_layout_margin_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/view_order_eat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/fastfood_sel_layout_padding"
+                android:background="@drawable/btn_sel"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/fastfood_sel_img"
+                    android:layout_height="@dimen/fastfood_sel_img"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/img_eat_in" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/fastfood_explain2_in"
+                    android:textColor="@color/text_color"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="@dimen/fastfood_sel_text_type"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_order_takeout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/fastfood_sel_layout_padding"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_nor"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/fastfood_sel_img"
+                    android:layout_height="@dimen/fastfood_sel_img"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/img_take_out" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/fastfood_explain2_out"
+                    android:textColor="@color/text_color"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="@dimen/fastfood_sel_text_type"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

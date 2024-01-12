@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/train_layout_margin"
+            android:paddingVertical="10dp"
+            android:background="@drawable/train_ticket_top_bg"
+            >
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/train_font_size_small"
+                android:text="2022"
+                />
+
+            <TextView
+                android:id="@+id/ticket_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/train_font_size_small"
+                android:text="@string/train_ticket_count"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/train_border_8"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/train_layout_margin"
+                android:background="@color/white"
+                android:layout_marginHorizontal="1dp"
+                >
+
+                <!-- 출발지/도착지 이름/시간-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="20dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:id="@+id/train_start_station"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="서울"
+                            android:textColor="@color/train_font_color_main"
+                            android:textSize="@dimen/train_font_size_large3"
+                            />
+
+                        <TextView
+                            android:id="@+id/train_start_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00"
+                            android:textColor="@color/train_font_color_main"
+                            android:textSize="@dimen/train_font_size_large"
+                            />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/img_arrow"
+                            android:layout_centerInParent="true"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <TextView
+                            android:id="@+id/train_arrival_station"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="부산"
+                            android:textColor="@color/train_font_color_main"
+                            android:textSize="@dimen/train_font_size_large3"
+                            />
+
+                        <TextView
+                            android:id="@+id/train_arrival_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00"
+                            android:textColor="@color/train_font_color_main"
+                            android:textSize="@dimen/train_font_size_large"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--티켓 정보 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:id="@id/train_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/train_font_size_small"
+                        android:text="무궁화호"
+                        />
+
+                    <TextView
+                        android:id="@+id/train_infos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/train_font_size_small"
+                        android:text="일반실 | 순방향"
+                        android:gravity="right"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/seat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+<!--
+                    <include
+                        layout="@layout/train_ticket_list_seat_info_item"
+                        />
+-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/leftBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/train_ticket_delivery"
+                android:textColor="@color/white"
+                android:textSize="@dimen/train_font_size"
+                android:background="@drawable/train_ticket_bottom_left_bg"
+                android:paddingVertical="16dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rightBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/train_ticket_return"
+                android:layout_marginLeft="1dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/train_font_size"
+                android:background="@drawable/train_ticket_bottom_right_bg"
+                android:paddingVertical="16dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

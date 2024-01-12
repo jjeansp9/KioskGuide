@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:layout_gravity="center"
+    tools:context=".hospital.fragments.CommonSubIdentifyFragment">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h15"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h20"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h40"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h70"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_notice_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hospital_sub_record_search_diagnosis"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_large3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/card_patient_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="12dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_patient_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="@dimen/common_margin_10"
+        app:cardCornerRadius="@dimen/default_corner_radius"
+        app:cardElevation="4dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_notice_main">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_notice_h_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/hospital_payment_paragraph_title_height" />
+            <LinearLayout
+                android:id="@+id/ll_notice_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:background="@color/hospital_notice_background_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_notice_h_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/font_size_large2"
+                    android:text="@string/hospital_sub_record_notice"
+                    android:textColor="@color/text_color_sub" />
+            </LinearLayout>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_10"
+                android:layout_marginVertical="@dimen/common_margin_20"
+                android:padding="8dp"
+                android:text="@string/hospital_sub_record_notice_content"
+                android:textColor="@color/text_color_sub"
+                android:textSize="@dimen/font_size"
+                android:lineSpacingMultiplier="1.2"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintTop_toBottomOf="@id/ll_notice_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin_10"
+        android:layout_marginVertical="12dp"
+        app:cardCornerRadius="@dimen/default_corner_radius"
+        app:cardElevation="4dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_patient_info"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_sub_h_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/hospital_payment_paragraph_title_height" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_sub_h_type"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+            <LinearLayout
+                android:id="@+id/ll_patient_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:background="@color/hospital_main_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_sub_h_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/font_size_large"
+                    android:text="@string/hospital_sub_record_diagnosis_type"
+                    android:textColor="@color/text_color" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_patient_title">
+                <CheckBox
+                    android:id="@+id/cb_outpatient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_20"
+                    android:checked="true"
+                    android:clickable="true"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:text="@string/hospital_sub_record_diagnosis_type_outpatient"
+                    android:textSize="@dimen/font_size_small"
+                    android:textColor="@color/text_color"
+                    />
+                <CheckBox
+                    android:id="@+id/cb_hospitalization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_20"
+                    android:clickable="true"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:text="@string/hospital_sub_record_diagnosis_type_hospitalization"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size_small"
+                    />
+            </LinearLayout>
+            <View
+                android:id="@+id/separator_type"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/hospital_gray_color"
+                app:layout_constraintTop_toBottomOf="@+id/ll_check"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="parent" />
+            <LinearLayout
+                android:id="@+id/ll_start_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/separator_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/separator">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/hospital_sub_record_diagnosis_start_date"
+                    android:textColor="@color/text_color_sub2"
+                    android:textSize="@dimen/font_size"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:id="@+id/tv_start_date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/common_margin_20"
+                    android:layout_marginVertical="@dimen/common_margin_10"
+                    android:drawableRight="@drawable/btn_accordion"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:hint="2022년 11월"
+                    android:text=""
+                    android:textSize="@dimen/font_size"
+                    android:textColor="@color/text_color"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+            <View
+                android:id="@+id/separator"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/hospital_gray_color"
+                app:layout_constraintTop_toBottomOf="@id/separator_type"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_start_date"
+                app:layout_constraintEnd_toEndOf="@id/ll_end_date" />
+
+            <LinearLayout
+                android:id="@+id/ll_end_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/separator_type"
+                app:layout_constraintStart_toEndOf="@id/separator"
+                app:layout_constraintEnd_toEndOf="parent">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/hospital_sub_record_diagnosis_end_date"
+                    android:textColor="@color/text_color_sub2"
+                    android:textSize="@dimen/font_size"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:id="@+id/tv_end_date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/common_margin_20"
+                    android:layout_marginVertical="@dimen/common_margin_10"
+                    android:hint="2022년 11월"
+                    android:text=""
+                    android:drawableRight="@drawable/btn_accordion"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textSize="@dimen/font_size"
+                    android:textColor="@color/text_color"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

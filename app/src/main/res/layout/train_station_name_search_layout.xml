@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/train_search_layout_height"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/train_station_name_searchbar_bg"
+            android:paddingHorizontal="@dimen/train_layout_margin"
+            android:paddingVertical="@dimen/train_reservation_margin"
+            android:onClick="onClick"
+            >
+
+            <ImageView
+                android:id="@+id/search_close_btn"
+                android:layout_width="100dp"
+                android:layout_height="28dp"
+                android:background="@drawable/btn_bar"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/train_reservation_margin"
+                android:padding="@dimen/train_reservation_margin"
+                android:gravity="center_vertical"
+                >
+
+                <EditText
+                    android:id="@+id/input_station_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#555"
+                    android:textSize="@dimen/train_font_size_small"
+                    android:hint="@string/train_station_searchbar_input_hint"
+                    android:textColorHint="@color/train_font_color_b"
+                    android:inputType="text"
+                    android:background="@color/white"
+                    />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/btn_search"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbarFadeDuration="0"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarThumbVertical="@android:color/holo_red_light"
+            android:scrollbarStyle="outsideInset"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!-- 주요역 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/train_reservation_margin"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/train_station_searchbar_subtitle"
+                        android:textSize="@dimen/train_font_size_small2"
+                        android:textColor="@color/train_font_color_8"
+                        />
+
+                </RelativeLayout>
+
+                <GridView
+                    android:id="@+id/main_station_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="2"
+                    android:background="@color/train_border_8"
+                    android:verticalSpacing="1dp"
+                    android:horizontalSpacing="1dp"
+                    android:textFilterEnabled="true"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/train_border_8"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

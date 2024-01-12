@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".hospital.fragments.insurance.InsuranceSendFragment">
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/headerGround"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_home_header_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/hospital_insurance_default_margin"
+        android:paddingVertical="@dimen/hospital_insurance_default_margin">
+
+
+        <LinearLayout
+            android:id="@+id/ly_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_insurance_send_box_layout"
+                android:orientation="vertical"
+                android:paddingVertical="30dp">
+
+                <LinearLayout
+                    android:id="@+id/__top_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/__center_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="보험금 "
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/font_size_xlarge"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="ONE-STOP"
+                        android:textColor="@color/text_color"
+                        android:textScaleX="0.95"
+                        android:textSize="@dimen/font_size_xlarge" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/__center_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="스마트 청구 시스템"
+                    android:textColor="@color/hospital_sub_color"
+                    android:textSize="@dimen/font_size_xlarge"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/__top_ll" />
+
+                <View
+                    android:id="@+id/__v_line"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/hospital_border_color_b"
+                    app:layout_constraintBottom_toTopOf="@+id/__bottom_text"
+                    app:layout_constraintEnd_toEndOf="@+id/__bottom_text"
+                    app:layout_constraintStart_toStartOf="@+id/__bottom_text"
+                    app:layout_constraintTop_toBottomOf="@+id/__center_text" />
+
+                <TextView
+                    android:id="@+id/__bottom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="보험금 청구서가 정상적으로 전송되었습니다."
+                    android:textColor="@color/text_color_sub"
+                    android:textSize="@dimen/font_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EEEEEE"
+                    android:orientation="vertical"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="접수에는 최대 1~2일이\n소요될 수 있으며,\n청구내용 및 안내사항은\n문자로 전송됩니다."
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/font_size_large"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hospital_navigate_btn_height"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/hospital_insurance_yellow_color"
+                    app:cardCornerRadius="@dimen/default_corner_radius"
+                    app:cardElevation="@dimen/default_card_elevation"
+                    app:contentPadding="@dimen/common_margin_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="이용 완료"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_large"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="16dp">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="XXX 님"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_large3"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hospital_insurance_required_doc_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/hospital_insurance_required_doc_height"
+                        android:background="#333333"
+                        android:gravity="center"
+                        android:text="내용 확인 후, 아래 전송하기 버튼을 눌러주세요."
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_large"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_insurance_doc_layout"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/hospital_insurance_required_doc_height"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/hospital_sub_color"
+                            android:gravity="center"
+                            android:text="보험사"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_company"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/hospital_border_color_b" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/hospital_insurance_required_doc_height"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/hospital_sub_color"
+                            android:gravity="center"
+                            android:text="청구서류"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_doc"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_scan"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hospital_navigate_btn_height"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/hospital_insurance_yellow_color"
+                    app:cardCornerRadius="@dimen/default_corner_radius"
+                    app:cardElevation="@dimen/default_card_elevation"
+                    app:contentPadding="@dimen/common_margin_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="전송하기"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_large"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/footerGround"
+        android:layout_width="match_parent"
+        android:layout_height="82dp" />
+
+</LinearLayout>

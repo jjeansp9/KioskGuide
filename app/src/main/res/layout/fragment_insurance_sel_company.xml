@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".hospital.fragments.insurance.InsuranceSelCompanyFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.legacy.widget.Space
+        android:id="@+id/headerGround"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/hospital_insurance_default_margin"
+        android:paddingVertical="@dimen/hospital_insurance_default_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="보험이 가입되어 있는 보험사를 선택해주세요"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_large2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/hospital_insurance_default_margin"
+                android:background="#FF9800"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:text="중복선택가능"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ly_prev"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hospital_insurance_required_doc_height"
+                android:layout_weight="1"
+                android:background="@drawable/btn_insurance_basic_selector"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="이전 보험사 보기"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size_large3"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/img_direction" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="218dp"
+                android:layout_marginTop="@dimen/hospital_insurance_default_margin"
+                android:layout_marginBottom="@dimen/hospital_insurance_default_margin">
+
+                <GridView
+                    android:id="@+id/gv_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hospital_insurance_required_doc_height"
+                android:layout_weight="1"
+                android:background="@drawable/btn_insurance_basic_selector"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="다음 보험사 보기"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size_large3"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/img_direction_turn" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/hospital_insurance_default_margin"
+            android:layout_weight="1"
+            android:background="@drawable/bg_insurance_doc_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_sel_cnt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hospital_insurance_required_doc_height"
+                android:background="#333333"
+                android:gravity="center"
+                android:text="※ 0개 보험사 선택"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_large2"
+                android:textStyle="bold" />
+
+            <GridView
+                android:id="@+id/gv_selected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/footerGround"
+        android:layout_width="match_parent"
+        android:layout_height="82dp" />
+
+</LinearLayout>

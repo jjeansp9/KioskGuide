@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.avad.humancare.kiosk.view.TrainHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!--  결제 탭 -->
+    <LinearLayout
+        android:id="@+id/layout_tab_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/train_tab_height"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/tab_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tab_text1"
+                style="@style/TrainTabTitleText"
+                android:layout_centerInParent="true"
+                android:text="@string/train_payment_subtitle1"
+                android:textSize="@dimen/train_font_size_large"/>
+
+            <View
+                android:id="@+id/tab_bottom1"
+                style="@style/TrainTabTitleBottomView"
+                android:layout_alignParentBottom="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tab_text2"
+                style="@style/TrainTabTitleText"
+                android:layout_centerInParent="true"
+                android:text="@string/train_payment_subtitle2"
+                android:textColor="@color/train_font_color_8"
+                android:textSize="@dimen/train_font_size_large"/>
+
+            <View
+                android:id="@+id/tab_bottom2"
+                style="@style/TrainTabTitleBottomView"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/TrainBorderStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_tab_pay" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/train_bg_color_e"
+                >
+
+                <!-- 카드결제 -->
+                <LinearLayout
+                    android:id="@+id/card_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/train_layout_margin"
+                    >
+
+                    <!-- 카드번호 -->
+                    <LinearLayout
+                        style="@style/TrainPaymentOfCard_ItemLayout"
+                        >
+
+                        <TextView
+                            style="@style/TrainPaymentOfCard_TitleTextView"
+                            android:text="@string/train_payment_card_number"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            >
+
+                            <EditText
+                                android:id="@+id/card_num_edit1"
+                                style="@style/TrainEditBox"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:ems="4"
+                                android:nextFocusDown="@id/card_num_edit2"
+                                />
+
+                            <EditText
+                                android:id="@+id/card_num_edit2"
+                                android:layout_marginLeft="10dp"
+                                style="@style/TrainEditBox"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:ems="4"
+                                android:nextFocusDown="@id/card_num_edit3"
+                                />
+
+                            <EditText
+                                android:id="@+id/card_num_edit3"
+                                android:layout_marginLeft="10dp"
+                                style="@style/TrainEditBox"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:ems="4"
+                                android:nextFocusDown="@id/card_num_edit4"
+                                />
+
+                            <EditText
+                                android:id="@+id/card_num_edit4"
+                                android:layout_marginLeft="10dp"
+                                style="@style/TrainEditBox"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:ems="4"
+                                android:nextFocusDown="@id/period_month"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!-- 유효기간 -->
+                    <LinearLayout
+                        style="@style/TrainPaymentOfCard_ItemLayout"
+                        >
+
+                        <TextView
+                            style="@style/TrainPaymentOfCard_TitleTextView"
+                            android:text="@string/train_payment_card_validity"
+                            />
+
+                        <EditText
+                            android:id="@+id/period_month"
+                            style="@style/TrainEditBox"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:ems="2"
+                            android:hint="MM"
+                            android:nextFocusDown="@id/period_year"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/month"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/train_font_size"
+                            android:layout_marginLeft="6dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/period_year"
+                            style="@style/TrainEditBox"
+                            android:inputType="number"
+                            android:layout_marginLeft="10dp"
+                            android:maxLength="4"
+                            android:ems="4"
+                            android:hint="YYYY"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/year"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/train_font_size"
+                            android:layout_marginLeft="6dp"
+                            />
+
+                    </LinearLayout>
+
+                    <!-- 비밀번호 -->
+                    <LinearLayout
+                        style="@style/TrainPaymentOfCard_ItemLayout"
+                        >
+
+                        <TextView
+                            style="@style/TrainPaymentOfCard_TitleTextView"
+                            android:text="@string/train_payment_card_password"
+                            />
+
+                        <EditText
+                            android:id="@+id/password"
+                            style="@style/TrainEditBox"
+                            android:inputType="numberPassword"
+                            android:maxLength="2"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="**"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/train_font_size"
+                            android:layout_marginLeft="6dp"
+                            />
+
+                    </LinearLayout>
+
+                    <!-- 카드종류 -->
+                    <LinearLayout
+                        style="@style/TrainPaymentOfCard_ItemLayout"
+                        >
+
+                        <TextView
+                            style="@style/TrainPaymentOfCard_TitleTextView"
+                            android:text="@string/train_payment_card_kind"
+                            />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <RadioButton
+                                android:id="@+id/radio1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/train_payment_card_kind_personal"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/train_font_size"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/radio2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/train_payment_card_kind_corporation"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/train_font_size"
+                                android:layout_marginLeft="50dp"
+                                />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <!-- 인증번호 -->
+                    <LinearLayout
+                        style="@style/TrainPaymentOfCard_ItemLayout"
+                        >
+
+                        <TextView
+                            style="@style/TrainPaymentOfCard_TitleTextView"
+                            android:text="@string/train_payment_card_auth_num"
+                            />
+
+                        <EditText
+                            android:id="@+id/authnumber"
+                            style="@style/TrainEditBox"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            />
+
+                    </LinearLayout>
+
+                    <!-- 인증번호2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="6dp"
+                        >
+
+                        <TextView
+                            style="@style/TrainPaymentOfCard_TitleTextView"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/train_payment_card_registration_num"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/train_font_size_small"
+                            android:layout_gravity="top"
+                            />
+
+                    </LinearLayout>
+
+                    <!-- 할부기간 -->
+                    <LinearLayout
+                        style="@style/TrainPaymentOfCard_ItemLayout"
+                        >
+
+                        <TextView
+                            style="@style/TrainPaymentOfCard_TitleTextView"
+                            android:text="@string/train_payment_card_installment_period"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/period_select_ly"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/train_edit_bg"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="8dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/period_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/train_payment_card_pay_full"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/train_font_size_small"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_accordion"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!-- 개인정보 동의 -->
+                    <LinearLayout
+                        style="@style/TrainPaymentOfCard_ItemLayout"
+                        android:gravity="center_vertical|right"
+                        >
+
+                        <TextView
+                            style="@style/TrainPaymentOfCard_TitleTextView"
+                            android:layout_width="wrap_content"
+                            android:text="@string/train_payment_card_agreement"
+                            android:textSize="@dimen/train_font_size_small"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/checkBox"
+                            android:layout_width="@dimen/train_font_size"
+                            android:layout_height="@dimen/train_font_size"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/btn_check_sel"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 현장결제 -->
+                <LinearLayout
+                    android:id="@+id/direct_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/img_card"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/train_payment_direct_explain"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/train_font_size_large"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/train_payment_total_info_layout_height"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/train_layout_margin"
+                >
+
+                <TextView
+                    android:id="@+id/total_count_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_payment_total_count"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_large"/>
+
+                <TextView
+                    android:id="@+id/total_price_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0원"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_large"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/train_footer"
+        android:id="@+id/btn_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

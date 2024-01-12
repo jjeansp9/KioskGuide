@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/train_bg_color_e"
+    >
+
+    <com.avad.humancare.kiosk.view.TrainHeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/train_layout_margin"
+        android:paddingVertical="@dimen/train_layout_margin"
+        >
+
+        <LinearLayout
+            android:id="@+id/left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_border04"
+            android:padding="6dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="14dp"
+                android:background="@drawable/btn_left" />
+
+            <TextView
+                android:id="@+id/left_btn_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1호차"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/font_size"
+                android:layout_marginLeft="6dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/left_btn"
+            android:layout_toStartOf="@id/right_btn"
+            android:layout_marginHorizontal="4dp"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/train_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서울"
+                style="@style/AutoSize"
+                android:maxLines="1"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/font_size_xlarge"
+                />
+
+            <TextView
+                android:id="@+id/train_seat_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022"
+                style="@style/AutoSize"
+                android:maxLines="1"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/font_size_large2"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_border04"
+            android:padding="6dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/right_btn_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3호차"
+                android:textColor="@color/train_font_color_main"
+                android:textSize="@dimen/font_size"
+                android:layout_marginRight="6dp"
+                />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="14dp"
+                android:background="@drawable/btn_right" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View style="@style/TrainBorderStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/train_layout_margin"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                >
+
+                <View
+                    android:layout_width="@dimen/train_seat_guide_bg_height"
+                    android:layout_height="@dimen/train_seat_guide_bg_height"
+                    android:background="@drawable/train_seat_bg1"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_seat_type1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small2"
+                    android:layout_marginLeft="4dp"
+                    />
+
+                <View
+                    android:layout_width="@dimen/train_seat_guide_bg_height"
+                    android:layout_height="@dimen/train_seat_guide_bg_height"
+                    android:background="@drawable/train_seat_bg2"
+                    android:layout_marginLeft="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_seat_type2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small2"
+                    android:layout_marginLeft="4dp"
+                    />
+
+                <View
+                    android:layout_width="@dimen/train_seat_guide_bg_height"
+                    android:layout_height="@dimen/train_seat_guide_bg_height"
+                    android:background="@drawable/train_seat_bg3"
+                    android:layout_marginLeft="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_seat_type3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small2"
+                    android:layout_marginLeft="4dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/train_seat_guide_bg_width"
+                    android:layout_height="@dimen/train_seat_guide_bg_height"
+                    android:background="@drawable/img_chair01"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_seat_direction"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small2"
+                    android:layout_marginLeft="4dp"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/train_seat_guide_bg_width"
+                    android:layout_height="@dimen/train_seat_guide_bg_height"
+                    android:background="@drawable/img_chair02"
+                    android:layout_marginLeft="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train_seat_reverse_direction"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/train_font_size_small2"
+                    android:layout_marginLeft="4dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/train_seat_window_outside"
+                android:textSize="@dimen/train_font_size_small"
+                android:textColor="@color/black"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/train_seat_window_inside"
+                android:textSize="@dimen/train_font_size_small"
+                android:textColor="@color/black"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/train_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0호차"
+                android:textSize="@dimen/train_font_size"
+                android:textColor="@color/train_font_color_main"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/train_seat_window_inside"
+                android:textSize="@dimen/train_font_size_small"
+                android:textColor="@color/black"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/train_seat_window_outside"
+                android:textSize="@dimen/train_font_size_small"
+                android:textColor="@color/black"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:numColumns="5" />
+
+    </LinearLayout>
+
+    <include layout="@layout/train_footer"/>
+
+</LinearLayout>

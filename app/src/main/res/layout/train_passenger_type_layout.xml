@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:layout_marginVertical="16dp"
+        >
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/train_passenger_type_baby"
+        android:textColor="@color/train_font_color_main"
+        android:textSize="@dimen/train_font_size"
+        />
+
+    <TextView
+        android:id="@+id/type_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/train_passenger_type_baby_detail"
+        android:textColor="@color/train_font_color_8"
+        android:textSize="@dimen/train_font_size_small"
+        android:layout_marginLeft="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        >
+
+        <ImageView
+            android:id="@+id/btn_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_minus_off"
+            />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/train_font_color_b"
+            android:textSize="@dimen/train_font_size"
+            android:layout_marginHorizontal="24dp"
+            android:text="0"
+            android:layout_gravity="center_vertical"
+            />
+
+        <ImageView
+            android:id="@+id/btn_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_plus_on"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

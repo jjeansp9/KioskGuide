@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.avad.humancare.kiosk.fastfood.FastfoodPaymentSelectActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/fastfood_header"
+        android:id="@+id/fastfood_header"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fastfood_header"
+        app:layout_constraintBottom_toTopOf="@id/fastfood_footer"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/fastfood_payment_sel_margin"
+            android:gravity="center"
+            >
+
+            <!-- 결제 방법 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fastfood_explain5"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_large2"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/payment_card_ly"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_sel"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fastfood_payment_card"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/font_size_large3"
+                        android:minLines="3"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fastfood_payment_card_detail"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/font_size"
+                        android:minLines="2"
+                        android:gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/payment_coupon_ly"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_nor"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:padding="16dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fastfood_payment_coupon"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/font_size_large3"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:minLines="3"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fastfood_payment_coupon_detail"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/font_size"
+                        android:minLines="2"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 할인/적립 방법 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fastfood_explain6"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_large2"
+                android:layout_marginTop="@dimen/fastfood_payment_sel_margin_top"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/fastfood_payment_sel_margin_top_sub">
+
+                <TextView
+                    android:id="@+id/save_discount_method1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/fastfood_payment_discount_saving1"
+                    android:background="@drawable/btn_sel"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/save_discount_method2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/fastfood_payment_discount_saving2"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/btn_nor"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/save_discount_method3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/fastfood_payment_discount_saving3"
+                    android:background="@drawable/btn_nor"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/fastfood_footer"
+        android:id="@+id/fastfood_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fastfood_layout_footer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

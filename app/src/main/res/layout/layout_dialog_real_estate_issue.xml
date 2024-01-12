@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/btn_nor"
+    android:gravity="center"
+    android:paddingVertical="40dp"
+    android:paddingHorizontal="60dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/issuance_real_estate_issue_dialog_msg1"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_size_xlarge"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/issuance_real_estate_issue_dialog_msg2"
+        android:textColor="@color/text_color_sub"
+        android:textSize="@dimen/font_size_large"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>

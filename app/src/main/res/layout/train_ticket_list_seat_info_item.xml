@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <!-- 표 타이틀 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/train_border_8"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@color/train_border_e"
+            android:text="@string/train_ticket_name"
+            android:textSize="@dimen/train_font_size_small"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingVertical="6dp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/train_border_e"
+            android:text="@string/train_ticket_train_name_num"
+            android:textSize="@dimen/train_font_size_small"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingVertical="6dp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/train_border_e"
+            android:text="@string/train_ticket_seat_number"
+            android:textSize="@dimen/train_font_size_small"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingVertical="6dp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/train_border_e"
+            android:text="@string/train_ticket_receipt"
+            android:textSize="@dimen/train_font_size_small"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingVertical="6dp"
+            />
+
+    </LinearLayout>
+
+    <!-- 표 내용 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/train_border_8"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:text="@string/train_ticketing_completed"
+            android:textSize="@dimen/train_font_size_small"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/train_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:text="@string/train_ticket_train_name_num"
+            android:textSize="@dimen/train_font_size_small"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/seat_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:text="@string/train_ticket_seat_number"
+            android:textSize="@dimen/train_font_size_small"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_qrcode02_nor"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 승차권번호 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/train_font_size_small2"
+            android:text="@string/train_ticket_number"
+            />
+
+        <TextView
+            android:id="@+id/ticket_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/train_font_size_small2"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

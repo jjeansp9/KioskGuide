@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid
+                android:color="@color/hospital_main_color"
+                />
+            <stroke
+                android:color="@color/hospital_sub_color"
+                android:width="@dimen/hospital_insurance_bg_stroke_width"
+                />
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid
+                android:color="@color/hospital_notice_background_color"
+                />
+            <stroke
+                android:color="@color/hospital_border_color_b"
+                android:width="@dimen/hospital_insurance_bg_stroke_width"
+                />
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid
+                android:color="@color/white"
+                />
+            <stroke
+                android:color="@color/hospital_border_color_b"
+                android:width="@dimen/hospital_insurance_bg_stroke_width"
+                />
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</selector>

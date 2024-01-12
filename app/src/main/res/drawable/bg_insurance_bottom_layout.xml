@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <stroke android:color="@color/hospital_border_color_b"
+                android:width="@dimen/hospital_insurance_bg_stroke_width"/>
+            <corners android:bottomLeftRadius="@dimen/hospital_insurance_bg_layout_radius"
+                android:bottomRightRadius="@dimen/hospital_insurance_bg_layout_radius"/>
+        </shape>
+    </item>
+    <item android:gravity="top"
+        android:height="@dimen/hospital_insurance_bg_stroke_margin"
+        android:end="@dimen/hospital_insurance_bg_stroke_margin"
+        android:start="@dimen/hospital_insurance_bg_stroke_margin">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+</layer-list>

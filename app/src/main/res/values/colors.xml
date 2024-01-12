@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#333</color>
+    <!--<color name="purple_700">#FF3700B3</color>-->
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="main_background_color">#333333</color>
+    <color name="text_color">#333333</color>
+    <color name="text_color_sub">#666666</color>
+    <color name="text_color_sub2">#999999</color>
+
+    <!-- fastfood -->
+    <color name="fastfood_bg_main_color">#2e6432</color>
+    <color name="fastfood_bg_btn_cancel">#a0a0a0</color>
+    <color name="fastfood_bg_btn_ok">#2e6432</color>
+    <color name="fastfood_bg_order_list">#ddefdf</color>
+
+    <color name="fastfood_scrollbar_bg">#dddddd</color>
+    <color name="fastfood_scrollbar_bg_small">#666666</color>
+
+    <color name="fastfood_border_6">#666666</color>
+    <color name="fastfood_border_b">#bbbbbb</color>
+
+    <!-- train -->
+    <color name="train_bg_color1">#626799</color>
+    <color name="train_bg_color2">#414679</color>
+    <color name="train_bg_color3">#161c54</color>
+    <color name="train_bg_color4">#dedfe7</color>
+    <color name="train_bg_color_e">#eeeeee</color>
+    <color name="train_bg_color_b">#bbbbbb</color>
+    <color name="train_bg_color_searchbar">#888</color>
+    <color name="train_bg_color_select_seat">#72b1ff</color>
+
+    <color name="train_border_e">#eeeeee</color>
+    <color name="train_border_8">#888</color>
+
+    <color name="train_font_color_main">#161c54</color>
+    <color name="train_font_color_8">#888888</color>
+    <color name="train_font_color_b">#bbbbbb</color>
+    <color name="train_font_color_blue">#3e59ff</color>
+    <color name="train_font_color_red">#ff0101</color>
+    <!-- ................. hospital ...................... -->
+    <color name="hospital_main_color">#bae0dd</color>
+    <color name="hospital_main_sel_color">#b2dad7</color>
+    <color name="hospital_sub_color">#37b5ab</color>
+    <color name="hospital_gray_color">#aaaaaa</color>
+    <color name="hospital_notice_background_color">#f7f7f7</color>
+    <color name="hospital_border_color">#777777</color>
+    <color name="hospital_border_color_b">#BBBBBB</color>
+    <color name="hospital_light_gray_color">#EEEEEE</color>
+    <color name="hospital_insurance_yellow_color">#FF9800</color>
+    <!-- ................................................. -->
+
+    <!-- issuance -->
+    <color name="issuance_bg_color_7">#777777</color>
+    <color name="issuance_font_color_blue">#005aa6</color>
+    <color name="issuance_font_color_yellow">#fcd602</color>
+    <color name="issuance_font_color_red">#ff3000</color>
+    <color name="issuance_font_color_red2">#8a0005</color>
+
+
+</resources>

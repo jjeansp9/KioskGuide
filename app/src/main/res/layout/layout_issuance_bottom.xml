@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/layout_margin"
+    android:layout_marginHorizontal="@dimen/common_margin_30"
+    >
+
+    <LinearLayout
+        android:id="@+id/btn_go_main"
+        android:layout_width="@dimen/issuance_bottom_circle_width"
+        android:layout_height="@dimen/issuance_bottom_circle_width"
+        android:orientation="vertical"
+        android:background="@drawable/img_textbox04"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_go_main"
+            />
+
+        <TextView
+            android:id="@+id/home_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/issuance_bottom_btn_home"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_small"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_go_back"
+        android:layout_width="@dimen/issuance_bottom_circle_width"
+        android:layout_height="@dimen/issuance_bottom_circle_width"
+        android:orientation="vertical"
+        android:background="@drawable/img_textbox04"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/btn_go_main"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_go_back"
+            />
+
+        <TextView
+            android:id="@+id/back_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/issuance_bottom_btn_back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_small"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_ok"
+        android:layout_width="@dimen/issuance_bottom_circle_width"
+        android:layout_height="@dimen/issuance_bottom_circle_width"
+        android:orientation="vertical"
+        android:background="@drawable/img_textbox05"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_go_next"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_small"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
